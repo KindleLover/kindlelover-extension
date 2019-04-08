@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>Options</title>
+	<link rel="stylesheet" href="styles/toastr.min.css">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/options.css	">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+		<div class="container"><a class="navbar-brand" href="#"><img src="images/ic_rocket_logo.png" width="30" height="30"
+					alt="Kindle Lover" class="logo-kindlelover"> Kindle Lover </a><button class="navbar-toggler" type="button"
+				data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="options.html">Options <span
+								class="sr-only">(current)</span></a></li>
+					<li class="nav-item"><a class="nav-link" href="#" id="rate-me">Reviews</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://kindlelover.com/" target="_blank">Website</a></li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="https://www.facebook.com/groups/kindlelover/"
+							target="_blank">Kindle Lover</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-header text-center">
+						<h5>List of supported websites</h5>
+					</div>
+					<div class="list-group list-group-flush">
+						<a href="https://sachvui.com" target="_blank"
+							class="list-group-item list-group-item-action">https://sachvui.com</a>
+						<a href="http://gen.lib.rus.ec" target="_blank"
+							class="list-group-item list-group-item-action">http://gen.lib.rus.ec</a>
+					</div>
+				</div>
+				<div class="card mt-4">
+					<a class="card-header text-center" href="https://www.facebook.com/groups/kindlelover/" target="_blank">
+						<h5>Join us on Facebook</h5>
+					</a>
+				</div>
+				<div class="card mt-4">
+					<div class="card-header text-center">
+						<h5>Show me your love!</h5>
+					</div>
+					<div class="card-body">If you like it, <a href="#" target="_blank" id="reviews-url">rate it on
+							Chrome Store</a> or <a href="https://www.buymeacoffee.com/cee" target="_blank">buy me a coffee</a> to
+						support the developer!
+						<div class="hr-wrapper">
+							<hr><span>Share</span></div>
+						<div id="share">
+
+							<!-- facebook -->
+							<a class="facebook"
+								href="https://www.facebook.com/share.php?u=https://kindlelover.com/&title=The easiest way to send ebook to your Kindle!"
+								target="blank">
+								<i class="fa fa-facebook"></i></a>
+							<!-- twitter -->
+							<a class="twitter"
+								href="https://twitter.com/intent/tweet?status=The easiest way to send ebook to your Kindle!+https://kindlelover.com/"
+								target="blank">
+								<i class="fa fa-twitter"></i></a>
+							<!-- linkedin -->
+							<a class="linkedin"
+								href="https://www.linkedin.com/shareArticle?mini=true&url=https://kindlelover.com/&title=The easiest way to send ebook to your Kindle!&source=LinkedIn"
+								target="blank">
+								<i class="fa fa-linkedin"></i></a>
+							<!-- pinterest -->
+							<a class="pinterest"
+								href="https://pinterest.com/pin/create/bookmarklet/?media={{media}}&url=https://kindlelover.com/&is_video=false&description=The easiest way to send ebook to your Kindle!"
+								target="blank">
+								<i class="fa fa-pinterest-p"></i>
+							</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-8">
+				<div class="card">
+					<div class="card-header text-center">
+						<h5>Options</h5>
+					</div>
+					<div class="card-body">
+						<!-- <form action="#" method="post"> -->
+						<div class="tab-content" id="option-content">
+							<div class="alert alert-success hide-div" role="alert" id='alert-success'>Save successfully!</div>
+							<label for="kindle-mail">Enter your Send-to-Kindle email address:</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">
+										<i class="fa fa-book" aria-hidden="true"></i>
+									</span>
+								</div>
+								<input type="text" class="form-control" id="kindle-mail" aria-describedby="basic-addon3"
+									placeholder="example@kindle.com">
+							</div>
+							<small id="mail-kindle-err" class="form-text text-muted error-text"></small>
+
+							<label for="amz-mail">Enter your Amazon email address:</label>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon3">
+										<i class="fa fa-amazon" aria-hidden="true"></i>
+									</span>
+								</div>
+								<input type="text" class="form-control" id="amz-mail" aria-describedby="basic-addon3"
+									placeholder="example@gmail.com">
+							</div>
+							<small id="mail-amz-err" class="form-text text-muted error-text"></small>
+							<div class="warp-btn-save">
+								<button class="btn btn-success btn-save" type="submit" id="btn-save">Save</button>
+							</div>
+						</div>
+						<!-- </form> -->
+					</div>
+				</div>
+				<div class="card-footer text-center text-muted">Developed by <a href="https://hungvu.net"
+						target="_blank">Cee</a>.
+					Copyright &copy; 2019 <a href="https://www.facebook.com/groups/kindlelover/" target="_blank">Kindle
+						Lover</a>.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="warp-btn-save">
+		<!-- <button class="btn btn-success btn-save" type="submit" id="btn-save">Save</button> -->
+	</div>
+	<div id="buttonText">
+	</div>
+</body>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/toastr.js"></script>
+<script src="scripts/toastrOptions.js"></script>
+<script src="scripts/options.js"></script>
+<script src="scripts/joi-browser.min.js"></script>
+
+</html>

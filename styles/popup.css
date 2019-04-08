@@ -1,0 +1,145 @@
+/* container */
+body {
+	width: 300px;
+	height: 200px;
+	/* background-color: #e9ebee; */
+	/* padding: 20px */
+	/* background-image: url("images/bg.svg"); */
+	/* background-size: cover; */
+}
+.header {
+	margin: 20px 20px 0px
+}
+.header-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.col-logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: gray;
+}
+a :hover {
+	cursor: pointer;
+}
+
+.logo {
+	margin-right: 10px
+}
+
+.card {
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+	padding: 2px 16px;
+	margin: 20px 20px 0px
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.row-options {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 5px 0px
+}
+.row-options:hover {
+	cursor: pointer;
+}
+
+.hr-wrapper {
+	margin: 23px 0;
+	position: relative
+}
+
+.hr-wrapper span {
+	text-transform: uppercase;
+	display: inline;
+	left: 50%;
+	padding: 8px;
+	position: absolute;
+	top: -16px;
+	color: #90949c;
+	line-height: 16px;
+	/* background-color: #FFF; */
+	background-color: transparent;
+	transform: translate(-50%, 0)
+}
+
+/* share */
+
+#share {
+	width: 100%;
+  	/* margin: 100px auto; */
+  	text-align: center;
+}
+
+/* buttons */
+
+#share a {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin: 8px;
+	border-radius: 50%;
+	font-size: 24px;
+	color: #fff;
+	opacity: 0.75;
+	transition: opacity 0.15s linear;
+}
+
+#share a:hover {
+	opacity: 1;
+}
+
+/* icons */
+
+#share i {
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+/* colors */
+
+.facebook {
+ 	background: #3b5998;
+}
+
+.twitter {
+  	background: #55acee;
+}
+
+.googleplus {
+  	background: #dd4b39;
+}
+
+.linkedin {
+  	background: #0077b5;
+}
+
+.pinterest {
+  	background: #cb2027;
+}
+
+.btn-save {
+	width: 150px;
+}
+
+.warp-btn-save {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.error-text {
+	color:red !important;
+}
+
+.hide-div {
+	display:none
+}

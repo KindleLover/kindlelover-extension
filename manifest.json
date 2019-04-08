@@ -1,0 +1,53 @@
+{
+  "name": "Kindle Lover",
+  "version": "1.0",
+  "description": "The easiest way to send ebook to your Kindle!",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/contentScript.js",
+        "scripts/toastr.js",
+        "scripts/toastrOptions.js",
+        "scripts/modal-dialog.js"
+      ],
+      "css": [
+        "styles/toastr.min.css",
+        "styles/contentStyles.css",
+        "styles/modal-dialog.css",
+        "styles/modal-dialog-animate.css"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/ic_rocket_logo.png",
+      "32": "images/ic_rocket_logo.png",
+      "48": "images/ic_rocket_logo.png",
+      "128": "images/ic_rocket_logo.png"
+    }
+  },
+  "icons": {
+    "16": "images/ic_rocket_logo.png",
+    "32": "images/ic_rocket_logo.png",
+    "48": "images/ic_rocket_logo.png",
+    "128": "images/ic_rocket_logo.png"
+  },
+  "manifest_version": 2
+}

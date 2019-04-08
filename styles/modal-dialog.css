@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/**
+ * Modal Dialog Css Library
+ * @authors c
+ * @date    2017-11-06
+ * @version 1.0.0
+ */
+
+.modal-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background: rgba(43, 46, 56, .9);*/
+}
+
+.modal-mask .modal-dialog {
+	/*padding: 0 200px;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*background: #FFF;*/
+    overflow: hidden;
+}
+
+/* start close */
+.modal-mask .modal-dialog .close {
+	position: absolute;
+/*	top: 8px;
+	left: 15px;*/
+	text-decoration: none;
+}
+
+.modal-mask .modal-dialog .close span {
+	color: #95979C;
+	/*font-size: 18px;*/
+	/*font-weight: bold;*/
+	-webkit-transition: color .3s;
+	transition: color .3s;
+}
+
+.modal-mask .modal-dialog .close:hover span {
+	color: #333;
+}
+/* close end */
+
+/* start head */
+.modal-mask .modal-dialog .dialog-head {
+	/*width: 100%;*/
+	/*height: 60px;*/
+	/*font-size: 20px;*/
+	/*font-weight: bold;*/
+	display: block;
+	/*color: #333;*/
+	/*text-align: center;*/
+	/* 让文字待在最底下: height * 2 - fontSize; */
+	/*line-height: 100px;*/
+	/*padding-bottom: 15px;*/
+}
+/* end head*/
+
+/* start body */
+.modal-mask .modal-dialog .dialog-body {
+	/*padding: 15px 20px;*/
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/*text-align: center;*/
+	/*font-size: 14px;*/
+	/*line-height: 1.5;*/
+    /*color: #2B2E38;*/
+    /*color: #919498;*/
+}
+/* end body */
+
+/* start footer */
+.modal-mask .modal-dialog .dialog-footer {
+    /*padding-top: 15px;*/
+    /*padding-bottom: 20px;*/
+}
+
+.modal-mask .modal-dialog .dialog-footer .button {
+	display: inline-block;
+	/*font-size: 14px;*/
+    /*line-height: 43px;*/
+    /*padding: 0 41px;*/
+    color: #FFF;
+    background: #2F2B2B;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+	/*margin-right: 40px;*/
+	text-align: center;
+	text-decoration: none;
+}
+
+.modal-mask .modal-dialog .dialog-footer .button:last-child {
+	/*margin: 0;*/
+}
+
+.modal-mask .modal-dialog .dialog-footer .button:hover  {
+	background: #0E0B0B;
+}
+
+/* end footer */

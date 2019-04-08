@@ -1,0 +1,28 @@
+.button-send-kindle {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  text-decoration: none !important;
+  margin-right: 5px;
+}
+.error-div {
+  color: red
+}
+
+.toastr {
+  background-color: red;
+}
