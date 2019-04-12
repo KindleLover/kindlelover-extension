@@ -1,11 +1,14 @@
 {
   "name": "Kindle Lover",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "The easiest way to send ebook to your Kindle!",
   "permissions": [
     "activeTab",
     "declarativeContent",
-    "storage"
+    "storage",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
   ],
   "options_page": "options.html",
   "background": {
@@ -21,10 +24,12 @@
       ],
       "js": [
         "scripts/jquery.js",
+        "scripts/tve4u.js",
         "scripts/contentScript.js",
         "scripts/toastr.js",
         "scripts/toastrOptions.js",
-        "scripts/modal-dialog.js"
+        "scripts/modal-dialog.js",
+        "scripts/crypto-js.min.js"
       ],
       "css": [
         "styles/toastr.min.css",
