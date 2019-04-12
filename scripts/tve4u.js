@@ -1,3 +1,4 @@
+// https://www.jqueryscript.net/lightbox/Customizable-Animated-Modal-Dialog.html
 function appendChildTve4U() {
   const referenceNode = document.querySelectorAll("a[href*='-mobi.']")[0]
     || document.querySelectorAll("a[href*='-epub.']")[0]
@@ -45,6 +46,7 @@ function appendChildTve4U() {
         title: 'Kindle Lover',
         bodyContent: 'Are you sure you want to send this ebook <br /> to your kindle?',
         bodyTextAlign: 'center',
+        buttonClassName: 'button-css',
         confirmText: 'Send',
         event: {
           // close: function () { alert('ok') },
