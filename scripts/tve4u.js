@@ -1,9 +1,9 @@
 // https://www.jqueryscript.net/lightbox/Customizable-Animated-Modal-Dialog.html
 function appendChildTve4U() {
-  const referenceNode = document.querySelectorAll("a[href*='-mobi.']")[0]
-    || document.querySelectorAll("a[href*='-epub.']")[0]
-    || document.querySelectorAll("a[href*='-azw3.']")[0]
-    || document.querySelectorAll("a[href*='-pdf.']")[0]
+  const referenceNode = document.querySelectorAll("a[href*='-mobi.']:target(_blank)")[0]
+    || document.querySelectorAll("a[href*='-epub.']:target(_blank)")[0]
+    || document.querySelectorAll("a[href*='-azw3.']:target(_blank)")[0]
+    || document.querySelectorAll("a[href*='-pdf.']:target(_blank)")[0]
 
   let attachFile = document.getElementsByClassName('attachedFilesHeader')[0];
 
