@@ -1,9 +1,10 @@
 // https://www.jqueryscript.net/lightbox/Customizable-Animated-Modal-Dialog.html
 function appendChildTve4U() {
-  const referenceNode = document.querySelectorAll("a[href*='-mobi.']:target(_blank)")[0]
-    || document.querySelectorAll("a[href*='-epub.']:target(_blank)")[0]
-    || document.querySelectorAll("a[href*='-azw3.']:target(_blank)")[0]
-    || document.querySelectorAll("a[href*='-pdf.']:target(_blank)")[0]
+  const referenceNode =
+    document.querySelectorAll(".attachment a[href*='-mobi.']")[0]
+    || document.querySelectorAll(".attachment a[href*='-epub.']")[0]
+    || document.querySelectorAll(".attachment a[href*='-azw3.']")[0]
+    || document.querySelectorAll(".attachment a[href*='-pdf.']")[0]
 
   let attachFile = document.getElementsByClassName('attachedFilesHeader')[0];
 
@@ -60,7 +61,7 @@ function appendChildTve4U() {
               });
               var cipherCookie = CryptoJS.AES.encrypt(JSON.stringify(cookie), 'kindleloverScret').toString();
               try {
-                const sendResult = await fetch('http://localhost:5000/api/send-link', {
+                const sendResult = await fetch('http://kindlelover.com/api/send-link', {
                   body: JSON.stringify({ kindleMail, amzMail, url: referenceNode.href, randomCode: cipherCookie }),
                   method: "POST",
                   headers: {
