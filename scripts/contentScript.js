@@ -118,15 +118,12 @@ function switchPage() {
   const host = window.location.host
   switch (host) {
     case 'sachvui.com':
-      console.log('sachvui.com')
       appendChildSachVui()
       break;
     case 'library1.org':
-      console.log('library1.org')
       appendChildGenLibRusEc()
       break;
     case 'tve-4u.org':
-      console.log('http://tve-4u.org')
       appendChildTve4U()
       break;
 

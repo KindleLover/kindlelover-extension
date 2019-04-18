@@ -3,7 +3,7 @@
 
 function appendChildTve4U() {
   chrome.runtime.sendMessage({ greeting: "getCookies" }, function (response) {
-    console.log('sent =>>');
+    console.log('Greeting'); // connect to background
   });
 
   const refNode = document.querySelectorAll('.attachment .boxModelFixer')
@@ -41,7 +41,6 @@ function appendChildTve4U() {
           }
           const kindleMail = result.mailAccount && result.mailAccount.kindleMail
           const amzMail = result.mailAccount && result.mailAccount.amzMail
-          // sendLinkToKindle(referenceNode.href, kindleMail, amzMail)
 
           new Dialog({
             title: 'Kindle Lover',
@@ -67,7 +66,6 @@ function appendChildTve4U() {
                         "content-type": "application/json",
                       },
                     });
-                    console.log('sendResult', sendResult)
                     if (sendResult && sendResult.ok) {
                       toastr.success(`We're processing your e-book right now, and we'll email you as soon as it's been delivered to your Kindle.`)
                     } else {
