@@ -42,17 +42,21 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/ic_rocket_logo.png",
-      "32": "images/ic_rocket_logo.png",
-      "48": "images/ic_rocket_logo.png",
-      "128": "images/ic_rocket_logo.png"
+      "16": "images/icon-16.png",
+      "19": "images/icon-19.png",
+      "32": "images/icon-32.png",
+      "38": "images/icon-38.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
     }
   },
   "icons": {
-    "16": "images/ic_rocket_logo.png",
-    "32": "images/ic_rocket_logo.png",
-    "48": "images/ic_rocket_logo.png",
-    "128": "images/ic_rocket_logo.png"
+    "16": "images/icon-16.png",
+    "19": "images/icon-19.png",
+    "32": "images/icon-32.png",
+    "38": "images/icon-38.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
   },
   "manifest_version": 2
 }
