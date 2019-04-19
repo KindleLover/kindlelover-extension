@@ -24,7 +24,6 @@
       ],
       "js": [
         "scripts/jquery.js",
-        "scripts/tve4u.js",
         "scripts/contentScript.js",
         "scripts/toastr.js",
         "scripts/toastrOptions.js",
