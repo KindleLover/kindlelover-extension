@@ -1,6 +1,7 @@
 {
   "name": "Kindle Lover",
-  "version": "0.0.1",
+  "short_name": "Kindle lover",
+  "version": "0.0.0.1",
   "description": "The easiest way to send ebook to your Kindle!",
   "permissions": [
     "activeTab",
@@ -42,18 +43,14 @@
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon-16.png",
-      "19": "images/icon-19.png",
       "32": "images/icon-32.png",
-      "38": "images/icon-38.png",
       "48": "images/icon-48.png",
       "128": "images/icon-128.png"
     }
   },
   "icons": {
     "16": "images/icon-16.png",
-    "19": "images/icon-19.png",
     "32": "images/icon-32.png",
-    "38": "images/icon-38.png",
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
