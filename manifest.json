@@ -8,8 +8,9 @@
     "declarativeContent",
     "storage",
     "cookies",
-    "http://*/*",
-    "https://*/*"
+    "http://tve-4u.org/*",
+    "https://sachvui.com/*",
+    "http://library1.org/*"
   ],
   "options_page": "options.html",
   "background": {
@@ -21,7 +22,9 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "http://tve-4u.org/*",
+        "https://sachvui.com/*",
+        "http://library1.org/*"
       ],
       "js": [
         "scripts/jquery.js",
