@@ -120,3 +120,8 @@ body {
 .text-support {
 	color:#F57133 !important;
 }
+
+.request-support:hover{
+	color: #007bff !important;
+	text-decoration: underline;
+}

@@ -1,14 +1,16 @@
 {
   "name": "Kindle Lover",
-  "version": "0.0.1",
+  "short_name": "Kindle lover",
+  "version": "0.0.0.1",
   "description": "The easiest way to send ebook to your Kindle!",
   "permissions": [
     "activeTab",
     "declarativeContent",
     "storage",
     "cookies",
-    "http://*/*",
-    "https://*/*"
+    "http://tve-4u.org/*",
+    "https://sachvui.com/*",
+    "http://library1.org/*"
   ],
   "options_page": "options.html",
   "background": {
@@ -20,11 +22,12 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "http://tve-4u.org/*",
+        "https://sachvui.com/*",
+        "http://library1.org/*"
       ],
       "js": [
         "scripts/jquery.js",
-        "scripts/tve4u.js",
         "scripts/contentScript.js",
         "scripts/toastr.js",
         "scripts/toastrOptions.js",
@@ -43,18 +46,14 @@
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon-16.png",
-      "19": "images/icon-19.png",
       "32": "images/icon-32.png",
-      "38": "images/icon-38.png",
       "48": "images/icon-48.png",
       "128": "images/icon-128.png"
     }
   },
   "icons": {
     "16": "images/icon-16.png",
-    "19": "images/icon-19.png",
     "32": "images/icon-32.png",
-    "38": "images/icon-38.png",
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
