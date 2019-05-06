@@ -27,7 +27,6 @@ function handleSendButton(sendButton, error, els) {
     chrome.storage.sync.get('mailAccount', function (result) {
       const checkValidObj = result && result.mailAccount && Object.values(result && result.mailAccount).some(x => x && x.length > 0)
       if (!checkValidObj) {
-        // element.insertBefore(error, elementReadOnline);
         sendButton.parentNode.insertBefore(error, sendButton.nextSibling)
         toastr.options.closeDuration = 1000;
         toastr.error('Please set up email in extension options setting!')
@@ -40,7 +39,6 @@ function handleSendButton(sendButton, error, els) {
       }
       const kindleMail = result.mailAccount && result.mailAccount.kindleMail
       const amzMail = result.mailAccount && result.mailAccount.amzMail
-      // sendLinkToKindle(els.href, kindleMail, amzMail)
 
       new Dialog({
         title: 'Kindle Lover',
@@ -61,10 +59,7 @@ function handleSendButton(sendButton, error, els) {
 }
 
 function appendChildSachVui() {
-  // var button = document.querySelectorAll(".col-md-8 .btn.btn-primary");
-  // var button = document.querySelectorAll("a.btn.btn-primary")[0];
   var btnReadOnline = document.querySelectorAll("a.btn.btn-warning.btn-md")[0]; // doc online button
-  // var button = $("a.btn.btn-warning.btn-md")[0];
   var sendButton = document.createElement('a');
   var error = document.createElement('div');
 
@@ -74,16 +69,13 @@ function appendChildSachVui() {
   sendButton.id = 'btn-send-kindle'
 
   var element = document.getElementsByClassName('col-md-8')[0]; //parent
-  // var elementReadOnline = document.querySelectorAll('a.btn.btn-warning.btn-md')[0];
   error.innerHTML = "Please set up email in setting!"
   error.className = 'error-div'
-  // element.insertBefore(sendButton, button);
 
   const els = document.querySelectorAll("a[href*='https://sachvui.com/download/mobi/']")[0]
     || document.querySelectorAll("a[href*='https://sachvui.com/download/epub/']")[0]
     || document.querySelectorAll("a[href*='https://sachvui.com/download/pdf/']")[0];
 
-  // console.log('els', els.href)
   els && els.href && element.insertBefore(sendButton, btnReadOnline)
 
   handleSendButton(sendButton, error, els)
@@ -200,8 +192,6 @@ function appendChildTve4U() {
 }
 
 
-
-// https://freetuts.net/bom-location-dieu-huong-va-xu-ly-url-trong-javascript-386.html
 function switchPage() {
   const host = window.location.host
   switch (host) {
