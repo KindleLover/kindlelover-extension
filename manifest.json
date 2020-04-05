@@ -10,7 +10,9 @@
     "cookies",
     "http://tve-4u.org/*",
     "https://sachvui.com/*",
-    "http://library1.org/*"
+    "http://library1.org/*",
+    "http://93.174.95.29/*",
+    "https://libgen.is/*"
   ],
   "options_page": "options.html",
   "background": {
@@ -24,7 +26,10 @@
       "matches": [
         "http://tve-4u.org/*",
         "https://sachvui.com/*",
-        "http://library1.org/*"
+        "http://library1.org/*",
+        "http://93.174.95.29/*",
+        "https://libgen.is/*",
+        "http://gen.lib.rus.ec/*"
       ],
       "js": [
         "scripts/jquery.js",
