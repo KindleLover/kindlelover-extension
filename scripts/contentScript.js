@@ -4,7 +4,7 @@
 //https://gomakethings.com/how-to-insert-an-element-after-another-one-in-the-dom-with-vanilla-javascript/
 async function sendLinkToKindle(url, kindleMail, amzMail) {
   try {
-    const sendResult = await fetch('https://kindlelover.com/api/send-link', {
+    const sendResult = await fetch('http://localhost:5000/api/send-link', {
       body: JSON.stringify({ kindleMail, amzMail, url }),
       method: "POST",
       headers: {
@@ -158,6 +158,24 @@ function displayGenLibRusEc(type) {
 
 }
 
+function appendChildBok() {
+  const refNode = document.querySelector('.btn-group .addDownloadedBook')
+  console.log('refNode', refNode)
+  let kindleEl = document.createElement('a');
+  kindleEl.id = 'kindlelover'
+  kindleEl.innerHTML = "Send to kindle!"
+  kindleEl.className = 'btn-send-bok';
+  kindleEl.type = 'button'
+  kindleEl.target = '_blank'
+  refNode.parentNode.insertBefore(kindleEl, refNode.nextSibling);
+
+  var error = document.createElement('div');
+  error.innerHTML = "Please set up email in setting!"
+  error.className = 'error-div'
+
+  handleSendButton(kindleEl, error, refNode)
+}
+
 // https://www.jqueryscript.net/lightbox/Customizable-Animated-Modal-Dialog.html
 
 
@@ -255,6 +273,7 @@ function switchPage() {
     displayGenLibRusEc()
   };
   if (host === 'tve-4u.org') return appendChildTve4U();
+  if (host === 'b-ok.org') return appendChildBok();
 }
 
 switchPage()

@@ -12,7 +12,8 @@
     "https://sachvui.com/*",
     "http://library1.org/*",
     "http://93.174.95.29/*",
-    "https://libgen.is/*"
+    "https://libgen.is/*",
+    "https://b-ok.org/*"
   ],
   "options_page": "options.html",
   "background": {
@@ -29,7 +30,8 @@
         "http://library1.org/*",
         "http://93.174.95.29/*",
         "https://libgen.is/*",
-        "http://gen.lib.rus.ec/*"
+        "http://gen.lib.rus.ec/*",
+        "https://b-ok.org/*"
       ],
       "js": [
         "scripts/jquery.js",
