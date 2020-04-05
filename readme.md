@@ -3,7 +3,7 @@ This is KindleLover extension
 A live version of this project is available at [**HERE**](https://chrome.google.com/webstore/detail/kindle-lover/omgapghelhjpgegcdmhcpjpajopoefji).
 
 ## Note
-Currently it was supported :
+It currently supports 5 websites:
 
 - http://gen.lib.rus.ec
 - http://tve-4u.org
