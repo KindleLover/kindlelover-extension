@@ -85,6 +85,8 @@ function appendChildGenLibRusEc() {
   const referenceNode = document.querySelectorAll("a[href$='.mobi']")[0]
     || document.querySelectorAll("a[href$='.epub']")[0]
     || document.querySelectorAll("a[href$='.pdf']")[0]
+    || document.querySelectorAll("a[href$='.azw3']")[0]
+    || document.querySelectorAll("a[href$='.prc']")[0]
   console.log('elementPoint', referenceNode)
   var sendButton = document.createElement('div');
   var hrElement = document.createElement('br');
@@ -104,6 +106,58 @@ function appendChildGenLibRusEc() {
 
 }
 
+function displayGenLibRusEc(type) {
+  // option 1:
+  // const arrATag = document.querySelectorAll(`[title="${type}"]`) || [];
+  // // const arrATag = document.querySelectorAll('[title="Gen.lib.rus.ec"]') || [];
+  // arrATag = document.querySelectorAll('tr > td:nth-of-type(10) > a')
+  // console.log('arrATagarrATag', arrATag)
+  // // const prevParentEl = arrATag.parentNode.previousSibling
+  // // const prevParentEl = arrATag.length > 0 && arrATag.map(e => e.parentNode.previousSibling.value)
+  // for (let el of arrATag) {
+  //   let kindleEl = document.createElement('a');
+  //   kindleEl.id = 'kindlelover'
+  //   kindleEl.innerHTML = "Click here!"
+  //   kindleEl.className = 'el-send-to-kindle';
+  //   kindleEl.type = 'button'
+  //   kindleEl.href = el.href
+  //   kindleEl.target = '_blank'
+  //   // el && el.href && el.parentNode.insertBefore(kindleEl, el.nextSibling)
+  //   // console.log('elll', el.parentNode.previousSibling.previousElementSibling)
+  //   let elVariable = el.parentNode.previousElementSibling.innerText
+  //   if (elVariable === 'pdf' || elVariable === 'mobi' || elVariable === 'epub') {
+  //     el && el.parentNode.insertBefore(kindleEl, el);
+  //   }
+  // }
+
+  // option 2:
+  var list = document.getElementsByTagName("tr")
+  for (let el of list) {
+    let kindleEl = document.createElement('a');
+    kindleEl.id = 'kindlelover'
+    kindleEl.innerHTML = "Click here!"
+    kindleEl.className = 'button-send-kindle';
+    kindleEl.type = 'button'
+    let ch = el.children[3]  // get 3rd child element in tr
+    const trHasA = el.children[9]
+    kindleEl.href = trHasA && trHasA.children[0].href
+    kindleEl.target = '_blank'
+
+    // get file type
+    let fileType = el.children[8] && el.children[8].innerText
+    if (el.rowIndex > 0
+      && (fileType === 'pdf'
+        || fileType === 'mobi'
+        || fileType === 'epub'
+        || fileType === 'azw3'
+        || fileType === 'prc')) {
+      // ch && ch.parentNode.insertBefore(kindleEl, ch.nextSibling);
+      ch && ch.insertBefore(kindleEl, ch.firstChild);
+    }
+  }
+
+}
+
 // https://www.jqueryscript.net/lightbox/Customizable-Animated-Modal-Dialog.html
 
 
@@ -119,6 +173,7 @@ function appendChildTve4U() {
       || element.querySelector('a') && element.querySelector('a').innerText === 'epub'
       || element.querySelector('a') && element.querySelector('a').innerText === 'azw3'
       || element.querySelector('a') && element.querySelector('a').innerText === 'prc'
+      || element.querySelector('a') && element.querySelector('a').innerText === 'pdf'
     ) {
       var sendButton = document.createElement('div');
       sendButton.innerHTML = "Send to Kindle"
@@ -194,20 +249,12 @@ function appendChildTve4U() {
 
 function switchPage() {
   const host = window.location.host
-  switch (host) {
-    case 'sachvui.com':
-      appendChildSachVui()
-      break;
-    case 'library1.org':
-      appendChildGenLibRusEc()
-      break;
-    case 'tve-4u.org':
-      appendChildTve4U()
-      break;
-
-    default:
-      break;
-  }
+  if (host === 'sachvui.com') return appendChildSachVui();
+  if (host === '93.174.95.29') return appendChildGenLibRusEc();
+  if (host === 'gen.lib.rus.ec' || 'libgen.is') {
+    displayGenLibRusEc()
+  };
+  if (host === 'tve-4u.org') return appendChildTve4U();
 }
 
 switchPage()
